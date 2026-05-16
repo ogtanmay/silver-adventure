@@ -39,6 +39,9 @@ jobs:
       - name: Run tests
         run: flutter test
 
+      - name: Create Android project files
+        run: flutter create --platforms=android .
+
       - name: Build APK
         run: flutter build apk --debug
 
