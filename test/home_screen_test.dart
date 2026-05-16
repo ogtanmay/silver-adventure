@@ -6,7 +6,7 @@ import 'package:grindos/main.dart';
 void main() {
   testWidgets('GrindOS dashboard renders key widgets', (WidgetTester tester) async {
     await tester.pumpWidget(const ProviderScope(child: GrindOsApp()));
-    await tester.pumpAndSettle();
+    await tester.pump();
 
     expect(find.text('GrindOS'), findsOneWidget);
     expect(find.text('Focus Mode'), findsOneWidget);
@@ -16,7 +16,7 @@ void main() {
 
   testWidgets('Focus toggle is interactive', (WidgetTester tester) async {
     await tester.pumpWidget(const ProviderScope(child: GrindOsApp()));
-    await tester.pumpAndSettle();
+    await tester.pump();
 
     final switchFinder = find.byType(Switch);
     expect(switchFinder, findsOneWidget);
@@ -25,7 +25,7 @@ void main() {
     final initialValue = before.value;
 
     await tester.tap(switchFinder);
-    await tester.pumpAndSettle();
+    await tester.pump();
 
     final Switch after = tester.widget<Switch>(switchFinder);
     expect(after.value, isNot(initialValue));
