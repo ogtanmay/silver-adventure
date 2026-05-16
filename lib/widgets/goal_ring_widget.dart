@@ -24,7 +24,7 @@ class GoalRingWidget extends StatelessWidget {
                 CircularProgressIndicator(
                   value: goal.ratio,
                   strokeWidth: 8,
-                  backgroundColor: Colors.white.withOpacity(0.08),
+                  backgroundColor: Colors.white.withValues(alpha: 0.08),
                 ),
                 Text('${(goal.ratio * 100).round()}%'),
               ],

@@ -21,7 +21,7 @@ void main() {
     final switchFinder = find.byType(Switch);
     expect(switchFinder, findsOneWidget);
 
-    Switch before = tester.widget<Switch>(switchFinder);
+    final Switch before = tester.widget<Switch>(switchFinder);
     final initialValue = before.value;
 
     await tester.tap(switchFinder);

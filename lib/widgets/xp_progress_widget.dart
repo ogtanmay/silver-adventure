@@ -22,7 +22,7 @@ class XpProgressWidget extends StatelessWidget {
             child: LinearProgressIndicator(
               value: progress.progress,
               minHeight: 12,
-              backgroundColor: Colors.white.withOpacity(0.08),
+               backgroundColor: Colors.white.withValues(alpha: 0.08),
             ),
           ),
           const SizedBox(height: 8),
