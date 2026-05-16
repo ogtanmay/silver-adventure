@@ -1,5 +1,3 @@
-import 'package:flutter/widgets.dart';
-
 import 'firebase_sync_service.dart';
 import 'local_storage_service.dart';
 
